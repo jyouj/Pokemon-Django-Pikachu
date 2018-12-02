@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        ピカチュウ
+      </h1>
+      <h2 class="subtitle">
+        {{ pikachu.name }}
+      </h2>
+    </div>
+  </div>
+</section>
+
+<div class="columns">
+  <div class="column is-3">
+    <img class="image is-128x128" src="{{ pikachu.sprites.front_default }}">
+  </div>
+  <div class="column is-3">
+    <img class="image is-128x128" src="{{ pikachu.sprites.front_shiny }}">
+  </div>
+  <div class="column is-3">
+    <img class="image is-128x128" src="{{ pikachu.sprites.front_female }}">
+  </div>
+  <div class="column is-3">
+    <img class="image is-128x128" src="{{ pikachu.sprites.back_default }}">
+  </div>
+</div>
+
+<nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">高さ</p>
+      <p class="title">{{ pikachu.height }}</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">経験値</p>
+      <p class="title">{{ pikachu.base_experience }}</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">重さ</p>
+      <p class="title">{{ pikachu.weight }}</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">図鑑番号</p>
+      <p class="title">{{ pikachu.id }}</p>
+    </div>
+  </div>
+</nav>
+{% endblock %}
