@@ -6,8 +6,8 @@ PokeAPIを使ったピカチュウの情報サイトのサンプル
 
 Django, Bulma, PokeAPI
 
-'''shell
+```
 $ pip install pokebase
-'''
+```
 
 これを忘れないでください
